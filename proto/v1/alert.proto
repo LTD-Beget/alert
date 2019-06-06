@@ -1,0 +1,23 @@
+syntax = 'proto3';
+
+package beget.alert.v1.alert;
+
+import "google/api/annotations.proto";
+import "alert/proto/v1/structures.proto";
+
+service AlertService {
+
+    rpc getList (GetListRequest) returns (GetListResponse) {
+        option (google.api.http) = {
+            get: "/v1/alert"
+        };
+    }
+}
+
+message GetListRequest {
+
+}
+
+message GetListResponse {
+    repeated structures.Alert alert = 1;
+}

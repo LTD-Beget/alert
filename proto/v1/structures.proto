@@ -1,0 +1,16 @@
+syntax = 'proto3';
+
+package beget.alert.v1.structures;
+
+message Alert {
+    string message = 1; // alert message
+    Type type = 2;
+
+    enum Type {
+        INFO = 0;
+        SUCCESS = 1;
+        WARNING = 2;
+        DANGER = 3;
+    }
+
+}
