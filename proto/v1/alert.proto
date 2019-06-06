@@ -19,5 +19,5 @@ message GetListRequest {
 }
 
 message GetListResponse {
-    repeated structures.Alert = 1;
+    repeated structures.Alert alert = 1;
 }
