@@ -3,6 +3,14 @@ syntax = 'proto3';
 package beget.alert.v1.structures;
 
 message Alert {
-    uint32 id = 1;
-    string message = 2; // alert message
+    string message = 1; // alert message
+    Type type = 2;
+
+    enum Type {
+        INFO = 0;
+        SUCCESS = 1;
+        WARNING = 2;
+        DANGER = 3;
+    }
+
 }
